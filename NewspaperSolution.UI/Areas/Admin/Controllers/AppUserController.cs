@@ -1,5 +1,6 @@
 ﻿using NewspaperSolution.DataAccessLayer.Repositories.Concrete.EfRepositories;
 using NewspaperSolution.EntityLayer.Entites.Concrete;
+using NewspaperSolution.Utility.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,10 @@ namespace NewspaperSolution.UI.Areas.Admin.Controllers
     public class AppUserController : Controller
     {
         private EfAppUserRepository _repo;
+        public AppUserController()
+        {
+            _repo = new EfAppUserRepository();
+        }
         // GET: Admin/AppUser
         [HttpGet]
         public ActionResult Create()
@@ -18,7 +23,7 @@ namespace NewspaperSolution.UI.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Create(AppUser data, HttpPostedFile Image)
+        public ActionResult Create(AppUser data, HttpPostedFileBase Image)
         {
             List<string> UploadImagePaths = new List<string>();
             UploadImagePaths = ImageUploader.UploadSingleImage(ImageUploader.OriginalProfileImagePath, Image, 1);
@@ -40,6 +45,11 @@ namespace NewspaperSolution.UI.Areas.Admin.Controllers
             _repo.Add(data);
             return Redirect("/Admin/AppUser/List");
         }
-        
+
+        public ActionResult List()
+        {
+            return View(_repo.GetActive());
+        }
+
     }
 }
