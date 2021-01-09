@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewspaperSolution.EntityLay
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewspaperSolution.MappingLayer", "NewspaperSolution.MappingLayer\NewspaperSolution.MappingLayer.csproj", "{8AE712EC-7040-4F15-A5D4-DFD0CD7FFC8B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewspaperSolution.DataAccessLayer", "NewspaperSolution.DataAccessLayer\NewspaperSolution.DataAccessLayer.csproj", "{4E0E80B8-D615-48D3-9A93-CF9D6DD1E599}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8AE712EC-7040-4F15-A5D4-DFD0CD7FFC8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8AE712EC-7040-4F15-A5D4-DFD0CD7FFC8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8AE712EC-7040-4F15-A5D4-DFD0CD7FFC8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E0E80B8-D615-48D3-9A93-CF9D6DD1E599}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E0E80B8-D615-48D3-9A93-CF9D6DD1E599}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E0E80B8-D615-48D3-9A93-CF9D6DD1E599}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E0E80B8-D615-48D3-9A93-CF9D6DD1E599}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
