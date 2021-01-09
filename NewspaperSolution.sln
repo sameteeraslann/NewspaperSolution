@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewspaperSolution.EntityLayer", "NewspaperSolution.EntityLayer\NewspaperSolution.EntityLayer.csproj", "{057746F2-19F0-4BF6-9595-4266104CA3A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewspaperSolution.MappingLayer", "NewspaperSolution.MappingLayer\NewspaperSolution.MappingLayer.csproj", "{8AE712EC-7040-4F15-A5D4-DFD0CD7FFC8B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{057746F2-19F0-4BF6-9595-4266104CA3A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{057746F2-19F0-4BF6-9595-4266104CA3A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{057746F2-19F0-4BF6-9595-4266104CA3A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{057746F2-19F0-4BF6-9595-4266104CA3A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AE712EC-7040-4F15-A5D4-DFD0CD7FFC8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AE712EC-7040-4F15-A5D4-DFD0CD7FFC8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AE712EC-7040-4F15-A5D4-DFD0CD7FFC8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AE712EC-7040-4F15-A5D4-DFD0CD7FFC8B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF85C75A-6BB6-401B-8E61-A20A37852160}
+	EndGlobalSection
+EndGlobal
