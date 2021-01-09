@@ -13,7 +13,7 @@ namespace NewspaperSolution.DataAccessLayer.Context
     {
         public ProjectContext()
         {
-            Database.Connection.ConnectionString = @"Server=DESKTOP-NPT9S1G;Database=NewspaperSolution;Integrated Secrurity=True";
+            Database.Connection.ConnectionString = @"Server=DESKTOP-NPT9S1G;Database=NewspaperSolution;Integrated Security=True";
         }
 
         public DbSet<AppUser> AppUsers { get; set; }

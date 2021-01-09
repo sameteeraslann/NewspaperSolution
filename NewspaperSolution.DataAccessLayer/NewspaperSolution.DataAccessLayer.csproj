@@ -52,7 +52,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\ProjectContext.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Concrete\BaseRepository.cs" />
+    <Compile Include="Repositories\Concrete\EfRepositories\EfAppUserRepository.cs" />
+    <Compile Include="Repositories\Concrete\EfRepositories\EfCategoryRepository.cs" />
+    <Compile Include="Repositories\Concrete\EfRepositories\EfCommentRepository.cs" />
+    <Compile Include="Repositories\Concrete\EfRepositories\EfPostRepository.cs" />
     <Compile Include="Repositories\Interfaces\IBaseRepository.cs" />
   </ItemGroup>
   <ItemGroup>
