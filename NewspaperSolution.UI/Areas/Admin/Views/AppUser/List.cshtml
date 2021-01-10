@@ -1,4 +1,4 @@
-﻿
+﻿@model List<NewspaperSolution.EntityLayer.Entites.Concrete.AppUser>
 @{
     ViewBag.Title = "List";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayoutPage.cshtml";
@@ -40,7 +40,7 @@
                                         <a href="/Admin/AppUser/Update/@item.Id" class="btn btn-sm btn-warning">Update</a>
                                     </td>
                                     <td>
-                                        <a href="/Admin/AppUser/Delete/@item.Id" class="btn btn-sm btn-danger">Delete</a>
+                                        <input type="button" onclick="Delete(@item.Id)" value="Delete" class="btn btn-danger btn sm" />
                                     </td>
                                 </tr>
                             }
@@ -55,3 +55,15 @@
     </div>
 </section>
 
+<script>
+    function Delete(id) {
+        $.ajax({
+            type: "POST",
+            url: "/AppUser/Delete/" + id,
+            success: function () {
+                $('#a_' + id).fadeOut();
+            }
+
+        })
+    }
+</script>
