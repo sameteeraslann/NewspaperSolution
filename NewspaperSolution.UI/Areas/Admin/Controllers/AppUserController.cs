@@ -108,11 +108,11 @@ namespace NewspaperSolution.UI.Areas.Admin.Controllers
 
         public JsonResult Delete(int id)
         {
-            AppUser appUser = _repo.GetById(id);
-            if (appUser != null)
+            AppUserDTO data = new AppUserDTO();
+            if (data != null)
             {
                 _repo.Remove(id);
-                return Json("");
+                return Json("/Admin/AppUser/List");
             }
             else
             {
