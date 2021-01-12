@@ -17,12 +17,14 @@ namespace NewspaperSolution.UI.Areas.Admin.Controllers
         EfPostRepository _postRepo;
         EfAppUserRepository _appUserRepo;
         EfCategoryRepository _categoryRepo;
+        EfCommentRepository _commentRepo;
 
         public PostController()
         {
             _postRepo = new EfPostRepository();
             _appUserRepo = new EfAppUserRepository();
             _categoryRepo = new EfCategoryRepository();
+            _commentRepo = new EfCommentRepository();
         }
 
         // GET: Admin/Post
@@ -118,6 +120,19 @@ namespace NewspaperSolution.UI.Areas.Admin.Controllers
         {
             _postRepo.Remove(id);
             return Redirect("/Admin/Post/List");
+        }
+
+        public ActionResult Details (int id)
+        {
+            PostDetailsVM data = new PostDetailsVM();
+            data.Post = _postRepo.GetById(id);
+            data.AppUser = _appUserRepo.GetById(data.Post.AppUserId);
+
+            data.Comments = _commentRepo.GetDefault(x => x.PostId == id && x.Status != Status.Passive);
+
+            data.CommentCount = _commentRepo.GetDefault(x => x.PostId == id && x.Status != Status.Passive).Count;
+
+            return View(data);
         }
     }
 }

@@ -137,6 +137,7 @@
     <Compile Include="Areas\Admin\Data\DTOs\CategoryDTO.cs" />
     <Compile Include="Areas\Admin\Data\DTOs\PostDTO.cs" />
     <Compile Include="Areas\Admin\Data\VMs\AddPostVM.cs" />
+    <Compile Include="Areas\Admin\Data\VMs\PostDetailsVM.cs" />
     <Compile Include="Areas\Admin\Data\VMs\UpdatePostVM.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -169,6 +170,7 @@
     <Content Include="Areas\Admin\Views\Post\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Post\List.cshtml" />
     <Content Include="Areas\Admin\Views\Post\Update.cshtml" />
+    <Content Include="Areas\Admin\Views\Post\Details.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
