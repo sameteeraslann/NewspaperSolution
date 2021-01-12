@@ -119,6 +119,7 @@
     <Content Include="Content\Uploads\Images\2.jpg" />
     <Content Include="Content\Uploads\Images\3533QTxo.jpg" />
     <Content Include="Content\Uploads\Images\4.jpg" />
+    <Content Include="Content\Uploads\Images\MRS.png" />
     <Content Include="Content\Uploads\UserImages\CruptedImages\userlogo.jpg" />
     <Content Include="Content\Uploads\UserImages\OriginalImages\userlogo.jpg" />
     <Content Include="Content\Uploads\UserImages\XSmallImages\userlogo.jpg" />
@@ -131,8 +132,12 @@
     <Compile Include="Areas\Admin\Controllers\AppUserController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PostController.cs" />
     <Compile Include="Areas\Admin\Data\DTOs\AppUserDTO.cs" />
     <Compile Include="Areas\Admin\Data\DTOs\CategoryDTO.cs" />
+    <Compile Include="Areas\Admin\Data\DTOs\PostDTO.cs" />
+    <Compile Include="Areas\Admin\Data\VMs\AddPostVM.cs" />
+    <Compile Include="Areas\Admin\Data\VMs\UpdatePostVM.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -161,6 +166,9 @@
     <Content Include="Areas\Admin\Views\Category\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Category\List.cshtml" />
     <Content Include="Areas\Admin\Views\Category\Update.cshtml" />
+    <Content Include="Areas\Admin\Views\Post\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Post\List.cshtml" />
+    <Content Include="Areas\Admin\Views\Post\Update.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -53,10 +53,10 @@ namespace NewspaperSolution.UI.Areas.Admin.Controllers
             return View(_repo.GetActive());
         }
         [HttpGet]
-        public ActionResult Update (int id)
+        public ActionResult Update(int id)
         {
-            AppUser appUser = _repo.GetById(id);
             AppUserDTO data = new AppUserDTO();
+            AppUser appUser = _repo.GetById(id);
             data.Id = appUser.Id;
             data.FirstName = appUser.FirstName;
             data.LastName = appUser.LastName;

@@ -56,7 +56,7 @@ namespace NewspaperSolution.DataAccessLayer.Repositories.Concrete
 
         public T GetById(int id)
         {
-            return _context.Set<T>().FirstOrDefault();
+            return _context.Set<T>().Find(id);
            
         }
 
