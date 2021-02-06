@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NewspaperSolution.EntityLayer.Entites.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,5 +14,6 @@ namespace NewspaperSolution.UI.Areas.Admin.Data.DTOs
         public string ImagePath { get; set; }
         public int CategoryId { get; set; }
         public int AppUserId { get; set; }
+       
     }
 }

@@ -1,4 +1,6 @@
 ﻿using NewspaperSolution.DataAccessLayer.Repositories.Concrete.EfRepositories;
+using NewspaperSolution.EntityLayer.Entites.Concrete;
+using NewspaperSolution.UI.Areas.Admin.Data.VMs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +15,18 @@ namespace NewspaperSolution.UI.Areas.Admin.Controllers
         public HomeController() => _postRepository = new EfPostRepository();
        
         // GET: Admin/Home
-        public ActionResult HomePage()
+        public ActionResult HomePage(int id)
         {
-            return View();
+            var getir = _postRepository.GetById(id);
+            if (getir!= null)
+            {
+                return View("HomePage", getir);
+            }
+            else
+            {
+                return View("/Home/HomePage");
+            }
+            
         }
     }
 }

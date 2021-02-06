@@ -46,7 +46,7 @@ namespace NewspaperSolution.DataAccessLayer.Repositories.Concrete
 
         public List<T> GetAll()
         {
-            return _context.Set<T>().ToList() ;
+            return _context.Set<T>().ToList();
         }
 
         public T GetByDefault(Expression<Func<T, bool>> exp)
@@ -78,6 +78,12 @@ namespace NewspaperSolution.DataAccessLayer.Repositories.Concrete
             
             Save();
         }
+
+        public List<T> GetPassive()
+        {
+            return _context.Set<T>().Where(x => x.Status == Status.Passive).ToList();
+        }
+
     }
 
 }

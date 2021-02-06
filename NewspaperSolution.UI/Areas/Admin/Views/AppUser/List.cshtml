@@ -27,7 +27,7 @@
                         <tbody>
                             @foreach (var item in Model)
                             {
-                                <tr>
+                                <tr id="@("a_" + item.Id)">
                                     <td>@item.Id</td>
                                     <td>@item.FirstName</td>
                                     <td>@item.LastName</td>
@@ -49,6 +49,9 @@
                 </div>
                 <div class="box-footer">
                     <a href="/Admin/AppUser/Create" class="btn btn-block btn-primary">Create The User</a>
+                </div>
+                <div class="box-footer">
+                    <a href="/Admin/AppUser/FullList" class="btn btn-block btn-success">Passive to User</a>
                 </div>
             </div>
         </div>

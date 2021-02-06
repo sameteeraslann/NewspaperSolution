@@ -12,14 +12,15 @@ namespace NewspaperSolution.DataAccessLayer.Repositories.Interfaces
     {
         void Add(T item);
         void Update(T item);
-        void Remove(int id);
-
+        void Remove(int id); //Passive duruma düşürür.
+        
         T GetById(int id);
         T GetByDefault(Expression<Func<T, bool>> exp);
-
+       
         List<T> GetDefault(Expression<Func<T, bool>> exp);
         List<T> GetActive();
         List<T> GetAll();
+        List<T> GetPassive();
 
         bool Any(Expression<Func<T, bool>> exp);
 

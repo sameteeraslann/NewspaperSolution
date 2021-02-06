@@ -4,8 +4,6 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayoutPage.cshtml";
 }
 
-
-
 <section class="content">
     <div class="row">
         <div class="col-sm-8">
@@ -14,7 +12,7 @@
                     <h4 class="box-title">Update User</h4>
                 </div>
                 <div class="box-body">
-                    <form action="/Admin/Category/Update" method="post" role="form" enctype="multipart/form-data">
+                    <form action="/Admin/AppUser/Update" method="post" role="form" enctype="multipart/form-data">
 
                         <input type="text" style="visibility:hidden" name="Id" value="@Model.Id" />
                         <div class="form-group">
@@ -46,12 +44,12 @@
                                 }
                             </select>
                         </div>
+                        
 
                         <div class="form-group">
                             <label>Choose Your Profile Image</label>
                             <input type="file" name="Image" value="@Model.XSmallUserImage" class="form-control" />
                         </div>
-
 
                         <div class="form-group" style="float:right">
                             <button type="submit" class="btn btn-primary">Update</button>

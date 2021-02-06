@@ -52,6 +52,11 @@ namespace NewspaperSolution.UI.Areas.Admin.Controllers
         {
             return View(_repo.GetActive());
         }
+
+        public ActionResult FullList()
+        {
+            return View(_repo.GetPassive());
+        }
         [HttpGet]
         public ActionResult Update(int id)
         {
@@ -69,7 +74,7 @@ namespace NewspaperSolution.UI.Areas.Admin.Controllers
             return View(data);
         }
 
-        // Delete çalışmıyor & Update de hep aynı ID geliyor.
+        // Delete çalışmıyor 
 
         [HttpPost]
         public ActionResult Update(AppUserDTO data , HttpPostedFileBase Image)
@@ -102,6 +107,8 @@ namespace NewspaperSolution.UI.Areas.Admin.Controllers
             appUser.UserName = data.UserName;
             appUser.Password = data.Password;
             appUser.Role = data.Role;
+            appUser.Status = Status.Modified;
+            appUser.UpdateDate = DateTime.Now;
             _repo.Update(appUser);
             return Redirect("/Admin/AppUser/List");
         }

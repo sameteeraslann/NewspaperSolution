@@ -171,6 +171,7 @@
     <Content Include="Areas\Admin\Views\Post\List.cshtml" />
     <Content Include="Areas\Admin\Views\Post\Update.cshtml" />
     <Content Include="Areas\Admin\Views\Post\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\AppUser\FullList.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -134,5 +134,7 @@ namespace NewspaperSolution.UI.Areas.Admin.Controllers
 
             return View(data);
         }
+
+       
     }
 }

@@ -14,11 +14,13 @@ namespace NewspaperSolution.UI.Areas.Admin.Data.VMs
             Comments = new List<Comment>();
             AppUser = new AppUser();
             Post = new Post();
+            
         }
         public List<AppUser> AppUsers { get; set; }
         public List<Comment> Comments { get; set; }
         public AppUser AppUser { get; set; }
         public Post Post { get; set; }
+       
 
         public int CommentCount { get; set; }
     }

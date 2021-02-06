@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NewspaperSolution.DataAccessLayer.Repositories.Concrete.EfRepositories
 {
-    public class EfAppUserRepository: BaseRepository<AppUser>
+    public class EfAppUserRepository: BaseRepository<AppUser>      // IBaseRepository
     {
     }
 }

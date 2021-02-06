@@ -14,6 +14,9 @@ namespace NewspaperSolution.UI.Areas.Admin.Data.DTOs
         public string UserName { get; set; }
         public string Password { get; set; }
         public Role Role { get; set; }
+
+        private Status _status = Status.Active;
+        public Status Status { get=>_status; set =>_status=value; }
         public string ImagePath { get; set; }
         public string UserImage { get; set; }
         public string XSmallUserImage { get; set; }

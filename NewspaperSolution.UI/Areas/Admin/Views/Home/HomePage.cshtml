@@ -1,4 +1,4 @@
-﻿
+﻿@model NewspaperSolution.EntityLayer.Entites.Concrete.Post
 @{
     ViewBag.Title = "HomePage";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayoutPage.cshtml";
@@ -7,19 +7,17 @@
 
 <style>
     .carousel-inner > .item > img,
-    .carousel-inner > .item > a > img
-    {
+    .carousel-inner > .item > a > img {
         width: auto;
         margin: auto;
     }
 </style>
-
 <section class="content">
     <div class="row">
         <div class="col-sm-8">
             <div class="box box-footer">
-                <div class="box-header" align="center" >
-                     <h4 class="box-title" >Admin Home Page</h4>
+                <div class="box-header" align="center">
+                    <h4 class="box-title">Admin Home Page</h4>
                 </div>
                 <div class="box-body">
                     <form action="/Admin/Home/HomePage" method="post" role="form" enctype="multipart/form-data">
@@ -29,10 +27,17 @@
                         <div id="myCarousel" class="carousel slide" data-ride="carousel">
                             <!-- Indicators -->
                             <ol class="carousel-indicators">
-                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#myCarousel" data-slide-to="1"></li>
-                                <li data-target="#myCarousel" data-slide-to="2"></li>
-                                <li data-target="#myCarousel" data-slide-to="3"></li>
+                                @foreach (var item in Model.ImagePath)
+                                {
+                                    for (int i = 0; i < Model.ImagePath.Length; i++)
+                                    {
+                                        <li data-target="#myCarousel" data-slide-to="i" class="active"></li>
+                                        <li data-target="#myCarousel" data-slide-to="i"></li>
+                                        <li data-target="#myCarousel" data-slide-to="i"></li>
+                                        <li data-target="#myCarousel" data-slide-to="i"></li>
+                                    }
+                                }
+
                             </ol>
 
                             <!-- Wrapper for slides -->
@@ -95,21 +100,26 @@
                         </div>
                         <br />
                         <br />
+                       
                         <div class="row mt-2">
-                            <div class="col-sm-4">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <img src="img/Battle_of_Waterloo_1815.png" class="card-img-top">
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Battle of Waterloo</h5>
-                                        <p class="card-text">The Battle of Waterloo was fought on Sunday, 18 June 1815, near Waterloo in Belgium, part of the United Kingdom of the Netherlands at the time. A French army under the command of Emperor Napoleon Bonaparte was defeated by two of the armies of the Seventh Coalition, a British-led coalition consisting of units from the United Kingdom, the Netherlands, Hanover, Brunswick and Nassau, under the command of the Duke of Wellington, referred to by many authors as the Anglo-allied army or Wellington's army, and a Prussian army under the command of Field Marshal von Blücher, referred also as Blücher's army. The battle marked the end of the Napoleonic Wars.</p>
-                                    </div>
-                                    <div class="card-footer">
-                                        <a href="https://en.wikipedia.org/wiki/Battle_of_Waterloo" class="btn btn-dark btn-block">Wikipedia</a>
+                            @using (Html.BeginForm("List", "Post", FormMethod.Post))
+                            {
+                                <div class="col-sm-4">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <img src="@Model.ImagePath" class="card-img-top">
+                                        </div>
+                                        <div class="card-body">
+                                             <h3 class="card-title">@Model.Header</h3>
+                                            <p class="card-text">@Model.Content</p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a href="https://en.wikipedia.org/wiki/Battle_of_Waterloo" class="btn btn-dark btn-block">Wikipedia</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            }
+
                             <div class="col-sm-4">
                                 <div class="card">
                                     <div class="card-header">

@@ -24,30 +24,34 @@
                                 <th>Details</th>
                                 <th>Update</th>
                                 <th>Delete</th>
+                                <th>Anasayfada Göster</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach (var item in Model)
                             {
-                                <tr>
-                                    <td>@item.Id</td>
-                                    <td>@item.Header</td>
-                                    <td>@item.Content</td>
-                                    <td>
-                                        <img src="@item.ImagePath" width="70" height="70" />
-                                    </td>
-                                    <td>@item.Category.Name</td>
-                                    <td>@item.AppUser.FirstName @item.AppUser.LastName</td>
-                                    <td>
-                                        <a href="/Admin/Post/Details/@item.Id" class="btn btn-sm btn-info">Details</a>
-                                    </td>
-                                    <td>
-                                        <a href="/Admin/Post/Update/@item.Id" class="btn btn-sm btn-warning">Update</a>
-                                    </td>
-                                    <td>
-                                        <a href="/Admin/Post/Delete/@item.Id" class="btn btn-sm btn-danger">Delete</a>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td>@item.Id</td>
+                                <td>@item.Header</td>
+                                <td>@item.Content</td>
+                                <td>
+                                    <img src="@item.ImagePath" width="70" height="70" />
+                                </td>
+                                <td>@item.Category.Name</td>
+                                <td>@item.AppUser.FirstName @item.AppUser.LastName</td>
+                                <td>
+                                    <a href="/Admin/Post/Details/@item.Id" class="btn btn-sm btn-info">Details</a>
+                                </td>
+                                <td>
+                                    <a href="/Admin/Post/Update/@item.Id" class="btn btn-sm btn-warning">Update</a>
+                                </td>
+                                <td>
+                                    <a href="/Admin/Post/Delete/@item.Id" class="btn btn-sm btn-danger">Delete</a>
+                                </td>
+                                <td>
+                                    <a href="/Admin/Home/HomePage/@item.Id" class="btn btn-sm btn-danger">Haberi Yayınla</a>
+                                </td>
+                            </tr>
                             }
                         </tbody>
                     </table>
